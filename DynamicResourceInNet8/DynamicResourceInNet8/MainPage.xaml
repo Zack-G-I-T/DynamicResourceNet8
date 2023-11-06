@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DynamicResourceInNet8.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Background="{DynamicResource PageBackgroundColor}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Label
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{AppThemeBinding Light='Light Mode',
+                                       Default='Light Mode',
+                                       Dark='Dark Mode'}"
+                TextColor="{DynamicResource ButtonTextColor}" />
+
+            <Border
+                Padding="30"
+                HeightRequest="300"
+                WidthRequest="300">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Offset="0.1" Color="{DynamicResource GradientColorStart}" />
+                        <GradientStop Offset="1.0" Color="{DynamicResource GradientColorEnd}" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Label
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    Text="Light mode should have blue and green gradient. Dark should have purple and orange"
+                    TextColor="{DynamicResource TextColor}" />
+            </Border>
+
+            <Button
+                x:Name="CounterBtn"
+                Background="{DynamicResource ButtonColor}"
+                Clicked="ChangeTheme"
+                HorizontalOptions="Center"
+                Text="Change Theme"
+                TextColor="{DynamicResource ButtonTextColor}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

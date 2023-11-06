@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="DynamicResourceInNet8.Resources.Themes.LightTheme"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+
+    <Color x:Key="PageBackgroundColor">White</Color>
+    <Color x:Key="ButtonColor">LightGreen</Color>
+    <Color x:Key="ButtonTextColor">Black</Color>
+    <Color x:Key="GradientColorStart">LightGreen</Color>
+    <Color x:Key="GradientColorEnd">LightBlue</Color>
+    <Color x:Key="TextColor">Black</Color>
+
+</ResourceDictionary> 
